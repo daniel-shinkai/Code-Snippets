@@ -1,0 +1,136 @@
+{
+	// Vue -----------------------------------------------
+
+	"Vue  Structure": {
+        "prefix": "makevue",
+        "scope": "javascript,typescript",
+        "body": [
+		"var ${1:data} = {",
+			"\t",
+		"};",
+		"",
+		"var ${2:vueName} = new Vue({",
+		"\tel: '#${3:elementId}',",
+		"\tdata: ${1:data},",
+			"\tmethods: {",   
+				"\t\t",
+			"\t},",
+			"\tcomputed: {",
+				"\t\t",
+			"\t},",
+			"\tcreated: function(){",
+				"\t\t",
+			"\t}",
+		"});"
+        ],
+        "description": "Vue  Structure"
+	},
+
+
+	// Pretty Alerts -------------------------------------
+
+	"Pretty Alerts": {
+        "prefix": "makeprettyalerts",
+        "scope": "javascript,typescript",
+        "body": [
+		"PrettyAlerts.show({",
+			"\ttype: '${1|info,danger|}',",
+			"\tdismissable: ${2|true,false|},",
+			"\tmessage: ${3:response.message}",
+		"});"
+        ],
+        "description": "Pretty Alert Show"
+	},  
+
+	// JQUERY -------------------------------------
+
+	"Jquery Ready": {
+        "prefix": "makeready",
+        "scope": "javascript,typescript",
+        "body": [
+			"$(document).ready(function(){",
+				"\t",
+			"});"
+        ],
+        "description": "Jquery $(document).ready()"
+	}, 
+
+	"Jquery Get": {
+        "prefix": "makeget",
+        "scope": "javascript,typescript",
+        "body": [
+		"$.get({",
+			"\turl: '/${1:url}',",
+			"\tdataType: 'json',",
+			"\tsuccess: function(response)",
+			"\t{",
+				"\t\t",
+			"\t},",
+			"\terror: function()",
+			"\t{",
+				"\t\t",
+			"\t}",
+		"});",
+        ],
+        "description": "Jquery .get"
+	}, 
+
+	"Jquery Post": {
+        "prefix": "makepost",
+        "scope": "javascript,typescript",
+        "body": [
+		"$.post({",
+			"\turl: '/${1:url}',",
+			"\tdata: {",
+				"\t\tdata1: myData,",
+				"\t\tdata2: myData2",
+			"\t},",
+			"\tdataType: 'json',",
+			"\tsuccess: function(response) {",
+				"\t\t",
+			"\t},",
+			"\terror: function() {",
+				"\t\t",
+			"\t}",
+		"});"
+        ],
+        "description": "Jquery .post"
+	}, 
+	
+
+	// php -------------------------------------
+	"Php make class": {
+	"prefix": "makeclass",
+	"scope": "html, php",
+	"body": [
+		"<?php", 
+		"",
+		"namespace IntecPhp\\\\${TM_DIRECTORY/.*\\/src\\/(.*)/$1/};",
+		"",
+		"class $TM_FILENAME_BASE",
+		"{",
+		"",
+			"\tpublic function __construct()",
+			"\t{",
+				"\t\t",
+			"\t}",
+			"",
+		"}",
+	],
+	"description": "Php make class"
+	}, 
+
+	
+	// SCSS & CSS
+	"SCSS media query breakpoint": {
+        "prefix": "makemediaquery",
+        "scope": "scss",
+        "body": [
+		"@include media-breakpoint-${1|up,down,only,between|}(${2|xs,sm,md,lg,xl|}){",
+			"\t",
+		"}"
+	],
+        "description": "SCSS media query breakpoint"
+	}, 
+}
+
