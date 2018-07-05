@@ -120,6 +120,26 @@
 	"description": "Php make class"
 	}, 
 
+	"Php make select query": {
+	"prefix": "makeselectquery",
+	"scope": "php",
+	"body": [
+		"\\$stmt = \\$this->conn->query(",
+		"\t'select * from ${TM_FILENAME_BASE/(.*)/${1:/downcase}/} where id = ?'",
+		"\t[\\$id]",
+		");",
+		"",
+		"if(\\$stmt) {",
+			"\treturn \\$stmt->fetch();",
+		"}",
+		"",
+		"return false;"
+	],
+	"description": "Php make select query"
+	}, 
+	
+		
+
 	
 	// SCSS & CSS
 	"SCSS media query breakpoint": {
@@ -133,4 +153,3 @@
         "description": "SCSS media query breakpoint"
 	}, 
 }
-
